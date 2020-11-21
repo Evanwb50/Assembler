@@ -1,0 +1,25 @@
+su SP, SP, *8
+su SP, SP, *4
+st A1, *0(SP)
+st A2, *4(SP)
+st RA, *8(SP)
+ad A2, R6, *0
+bl GCD
+lo  A1, *0(SP)
+lo  A2, *4(SP)
+lo RA, *8(SP)
+ad SP, SP, *8
+ad SP, SP, *4
+ad R7, R0, *1
+be A3, R7, *3
+ad R6, R6, *1
+lb R15, LOOP
+br R15
+EXIT:
+or A3, R0, R6
+go A3
+br RA
+GCD:
+bn A1, R0, 2
+lb R7, RETURN
+br R7

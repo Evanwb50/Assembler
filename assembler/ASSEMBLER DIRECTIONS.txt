@@ -1,0 +1,22 @@
+***DO NOT TRY TO RUN THIS WITH JUST ANY FILE. IT MUST BE PROPERLY FORMATTED BEFORE RUNNING THE COMMAND***
+
+The input file must meet the following requirements:
+1. All labels must appear above the line which they refer to, be in capital letters, and have a semicolon after
+	Ex: LABEL:
+2. There shouldn't be any whitespace in between lines
+3. After the last  line of code, there must be a single empty line
+4. Comments can only appear on a line by themselves
+5. No lines should have spaces after them, and there must be a space in between every operand
+
+***SEE THE "example.txt" FILE IN THE DIRECTORY FOR WHAT THE FORMAT SHOULD LOOK LIKE***
+
+
+
+
+To assemble all the files using gcc, execute the following command:
+
+gcc -g -o main main.c pass1.h pass1.c pass2.h pass2.c pass3.h pass3.c pass4.h pass4.c parser.h parser.c
+
+Then, to run the assembler, given an example text file "test.txt":
+
+./main ./test.txt
